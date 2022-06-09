@@ -42,7 +42,7 @@ int main()
 			intensity_r = img.at<Vec3b>(i, j)[2]; // red channel
 			n++;
 			printf("%d - %d, %d, %d \n", n, intensity_r, intensity_g, intensity_b);
-			printf("size = %d * %d = %d \n", size.width, size.height, size.width * size.height);
+			//printf("size = %d * %d = %d \n", size.width, size.height, size.width * size.height);
 
 			sum_r = sum_r + intensity_r;
 			sum_g = sum_g + intensity_g;
