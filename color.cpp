@@ -37,7 +37,7 @@ int main()
 
 			intensity_r = img.at<Vec3b>(i, j)[2]; // red channel
 			n++;
-			printf("%d - %d, %d, %d \n", n, intensity_b, intensity_g, intensity_r);
+			printf("%d - %d, %d, %d \n", n, intensity_r, intensity_g, intensity_b);
 
 			sum_r = sum_r + intensity_r;
 			sum_g = sum_g + intensity_g;
@@ -45,8 +45,11 @@ int main()
 		}
 	}
 
-	
+	mean_r = sum_r / n;
+	mean_g = sum_g / n;
+	mean_b = sum_b / n;
 
+	printf("mean(rgb) - %d, %d, %d \n", mean_r, mean_g, mean_b);
 
 
 	waitKey(0);
